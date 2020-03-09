@@ -86,10 +86,20 @@ namespace LeetCode_Challenges
 
         public static int Reverseint(int x)
         {
-            //Console.WriteLine(string.Format("{0:0.0}", SumOfDoubles));
+            List<int> arr = new List<int> { };
+            while (x>0)
+            {
+                int temp = x % 10;
+                arr.Add(temp);
+                x = x / 10;
+            }
+            x = 0;
+            for (int i = 0; i < arr.Count; i++)
+            {
 
 
-            return 0;
+            }
+            return x;
 
 
             //https://leetcode.com/problems/reverse-integer/
