@@ -6,6 +6,8 @@ namespace LeetCode_Challenges
 {
     class MTSN
     {
+        /*This methods compares the index of two arrays and counts the number 
+         * of times each array has a larger number than the other array.*/
         public static List<int> CompareThrees(List<int> a, List<int> b)
         {
             List<int> count = new List<int>() { 0, 0};
@@ -26,6 +28,24 @@ namespace LeetCode_Challenges
             }
             return count;
         }
+
+        //Reverse array
+
+        public static int[] ReverseArr(int[] a)
+        {
+            List<int> output = new List<int> { };
+            for (int i = 0, j = a.Length -1 ; i < a.Length ; i++, j--)
+            {
+                output.Add(a[j]);
+            }
+            return output.ToArray();
+        }
+        
+        
+
+        
+
+
 
     }
 

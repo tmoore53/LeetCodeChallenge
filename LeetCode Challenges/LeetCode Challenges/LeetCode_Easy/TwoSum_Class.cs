@@ -47,5 +47,53 @@ namespace LeetCode_Challenges
 
             }
         }
+        //Very unclear instructions to solve needs work
+        public static string GenerateTheString(int n)
+        {
+            string test = "";
+            Random a = new Random();
+            string c = "c";
+            string b = "b";
+            for (int i = 0; i < n; i++)
+            {
+                if (n % 2 == 0)
+                {
+                    test = test + c;
+                }
+                if (a.Next(2) == 1 && n % 2 == 1)
+                {
+                    test = test + b;
+                }
+                else if (a.Next(3) == 2 && n % 2 == 1)
+                {
+                    test = test + c;
+                }
+
+                //if (a.Next(2) == 1)
+                //{
+                //    test = test + c;
+                //}
+                //else
+                //    test = test + b;
+            }
+            return test;
+            //https://leetcode.com/contest/weekly-contest-179/problems/generate-a-string-with-characters-that-have-odd-counts/ 
+        }
+
+        //Reverse integers
+        //Keep in mind negative numbers from -2^32 -> 2^32
+        //Do some math
+
+        public static int Reverseint(int x)
+        {
+            //Console.WriteLine(string.Format("{0:0.0}", SumOfDoubles));
+
+
+            return 0;
+
+
+            //https://leetcode.com/problems/reverse-integer/
+        }
+
     }
 }
