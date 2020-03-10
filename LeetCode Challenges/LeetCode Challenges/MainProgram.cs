@@ -16,6 +16,9 @@ namespace LeetCode_Challenges
             List<int> test2 = new List<int> () { 1, 2, 4, 4 };
             List<int> test3 = new List<int>() { 2, 3, 3, 4 };
 
+            int test4 = 1234;
+            Console.WriteLine(TS.Reverseint(test4));
+            Console.WriteLine(Int32.MaxValue);
 
             //Console.WriteLine(   TS.GenerateTheString(4));
 

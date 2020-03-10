@@ -84,15 +84,44 @@ namespace LeetCode_Challenges
         //Keep in mind negative numbers from -2^32 -> 2^32
         //Do some math
 
+
         public static int Reverseint(int x)
         {
-            //Console.WriteLine(string.Format("{0:0.0}", SumOfDoubles));
+            int y = 0;
+            int temp;
+            if (x < 0)
+            {
+                x = x *(-1);
+                while (x != 0)
+                {
+                    temp = x % 10;
+                    y = (y * 10) + temp;
+                    x = x / 10;
+                }
+                y = y * (-1);
+            }
+            else if (x > 0)
+            {
+                while (x != 0)
+                {
+                    temp = x % 10;
+                    y = (y * 10) + temp;
+                    x = x / 10;
+                }
+            }
 
+            return y;
+        }
 
-            return 0;
+        public static void Repeating(int[] arR)
+        {
 
-
-            //https://leetcode.com/problems/reverse-integer/
+            int res = 0;
+            foreach (int n in arR)
+            {
+                res ^= n;
+            }
+            Console.WriteLine("The number that does not repeat in the array is {0}", res);
         }
 
     }
