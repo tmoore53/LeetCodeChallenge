@@ -47,7 +47,7 @@ namespace LeetCode_Challenges
 
             }
         }
-        //Very unclear instructions to solve needs work
+        //Very unclear instructions to solve needs work.
         public static string GenerateTheString(int n)
         {
             string test = "";
@@ -80,11 +80,7 @@ namespace LeetCode_Challenges
             //https://leetcode.com/contest/weekly-contest-179/problems/generate-a-string-with-characters-that-have-odd-counts/ 
         }
 
-        //Reverse integers
-        //Keep in mind negative numbers from -2^32 -> 2^32
-        //Do some math
-
-
+        //Reverse integers.
         public static int Reverseint(int x)
         {
             int y = 0;
@@ -113,6 +109,7 @@ namespace LeetCode_Challenges
             return y;
         }
 
+        //Identifies the number that doesn't repeat in a array.
         public static void Repeating(int[] arR)
         {
 
@@ -124,5 +121,31 @@ namespace LeetCode_Challenges
             Console.WriteLine("The number that does not repeat in the array is {0}", res);
         }
 
+        public static bool IsPalindrome(int x)
+        {
+            List<int> temp = new List<int> { };
+            while(x > 0 )
+            {
+                temp.Add(x % 10);
+                x = x / 10;
+
+            }
+            for (int i = 0, j = temp.Count -1; i < (temp.Count/2) -1; i++, j--)
+            {
+                if (temp[i] == temp[j])
+                {
+                    return true;
+                }
+                else
+                    return false;
+            }
+            foreach (var item in temp)
+            {
+                Console.WriteLine(item);
+
+            }
+
+            return false;
+        }
     }
 }

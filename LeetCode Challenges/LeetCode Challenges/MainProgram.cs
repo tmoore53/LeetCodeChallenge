@@ -16,9 +16,19 @@ namespace LeetCode_Challenges
             List<int> test2 = new List<int> () { 1, 2, 4, 4 };
             List<int> test3 = new List<int>() { 2, 3, 3, 4 };
 
-            int test4 = 1234;
-            Console.WriteLine(TS.Reverseint(test4));
-            Console.WriteLine(Int32.MaxValue);
+            int test4 = 121;
+
+            Console.WriteLine(   TS.IsPalindrome(test4));
+
+            Person tyler = new Person(-1);
+            tyler.yearPasses();
+            tyler.yearPasses();
+            tyler.yearPasses();
+            Console.WriteLine(tyler.age);
+            tyler.amIOld();
+
+
+            //Console.WriteLine(TS.Reverseint(test4));
 
             //Console.WriteLine(   TS.GenerateTheString(4));
 
