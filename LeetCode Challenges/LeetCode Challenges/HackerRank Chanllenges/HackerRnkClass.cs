@@ -39,11 +39,20 @@ namespace LeetCode_Challenges
             {
                 output.Add(a[j]);
             }
+
+            int n = a.Length;
+            while (n >= 1)
+            {
+                Console.Write(a[--n] + "");
+            }
             return output.ToArray();
+
         }
 
+
+
         //This method requests an integer input and iterates it through a for loop.
-        public static void Day4forloop()
+        public static void Day5forloop()
         {
             Console.WriteLine("Please enter a number to iterate by:");
             int n = Convert.ToInt32(Console.ReadLine());
@@ -56,14 +65,52 @@ namespace LeetCode_Challenges
 
         }
 
+        //Sum of all integers in a array.
+        public static int simpleArraySum(int[] ar)
+        {
+
+            int x = 0;
+            foreach (int item in ar)
+            {
+                x = x + item;
+            }
+            return x;
+            /*
+             * Write your code here.
+             */
+
+        }
+
+        public static void Day6(string str)
+        {
+            string odd = "";
+            string even = "";
+            for (int i = 0; i < str.Length; i++)
+            {
+                if (i%2 == 0)
+                {
+                    even = even + str[i];
+                }
+                else if(i%2 != 0 )
+                {
+                    odd = odd + str[i];
+                }
+                
+            }
+            Console.WriteLine(even + " " + odd);
+
+            //The results are the same but do not match the request.
+            //Reference: https://www.hackerrank.com/challenges/30-review-loop/problem
+        }
+
     }
 
     //This person class is for the Day 3 Challenge of 30 Days of code.
-    class Day3Personclass
+    class Day4Personclass
     {
         public int age;
         //Constructor to set the age of a person.
-        public Day3Personclass(int initialAge)
+        public Day4Personclass(int initialAge)
         {
             if (initialAge < 0)
             {

@@ -20,15 +20,23 @@ namespace LeetCode_Challenges
 
             Console.WriteLine(   TS.IsPalindrome(test4));
 
-            Day3Personclass tyler = new Day3Personclass(-1);
+            Day4Personclass tyler = new Day4Personclass(-1);
             tyler.yearPasses();
             tyler.yearPasses();
             tyler.yearPasses();
             Console.WriteLine(tyler.age);
             tyler.amIOld();
 
-            HackerRnkClass.Day4forloop();
+            //HackerRnkClass.Day4forloop();
 
+            string strtest = "Hacker";
+            string strtest1 = "Rank";
+
+
+            HackerRnkClass.Day6(strtest);
+            HackerRnkClass.Day6(strtest1);
+
+            HackerRnkClass.ReverseArr(test);
 
             //Console.WriteLine(TS.Reverseint(test4));
 
