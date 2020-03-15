@@ -39,7 +39,7 @@ namespace LeetCode_Challenges
             {
                 output.Add(a[j]);
             }
-
+            //Day6 Array Challange.
             int n = a.Length;
             while (n >= 1)
             {
