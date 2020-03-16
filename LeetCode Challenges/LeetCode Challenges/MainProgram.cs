@@ -38,6 +38,8 @@ namespace LeetCode_Challenges
 
             HackerRnkClass.ReverseArr(test);
 
+            HackerRnkClass.Day8Dictionary();
+
             //Console.WriteLine(TS.Reverseint(test4));
 
             //Console.WriteLine(   TS.GenerateTheString(4));

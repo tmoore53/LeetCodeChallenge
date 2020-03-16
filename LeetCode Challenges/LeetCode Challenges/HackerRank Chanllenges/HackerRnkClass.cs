@@ -43,7 +43,7 @@ namespace LeetCode_Challenges
             int n = a.Length;
             while (n >= 1)
             {
-                Console.Write(a[--n] + "");
+                Console.WriteLine(a[--n] + "");
             }
             return output.ToArray();
 
@@ -103,6 +103,50 @@ namespace LeetCode_Challenges
             //Reference: https://www.hackerrank.com/challenges/30-review-loop/problem
         }
 
+        public static void Day8Dictionary()
+        {
+            Console.WriteLine("How many names do you want to add?");
+            int n = Convert.ToInt32(Console.ReadLine());
+            Dictionary<string, int> phoneBook = new Dictionary<string, int>(n);
+            Console.WriteLine($"Enter Name and phone number {n} times.");
+            for (int i = 0; i < n; i++)
+            {
+                
+                string[] temp = Console.ReadLine().Split(' ');
+                if (temp[1].Length == 7)
+                {
+                    phoneBook.Add(temp[0], Convert.ToInt32(temp[1]));
+                }
+            }
+            string nameToSearch = "";
+            Console.WriteLine("Search for a name in the phone book.");
+            while ((nameToSearch = Console.ReadLine()) != null)
+            {
+                int flagFound = 0;
+                if (nameToSearch != "")
+                {
+                    if (phoneBook.ContainsKey(nameToSearch))
+                    {
+                        flagFound = 1;
+                    }
+                }
+                if (flagFound == 1)
+                {
+                    Console.WriteLine(nameToSearch + "=" + phoneBook[nameToSearch]);
+                }
+                else if (nameToSearch == "")
+                {
+                    break;
+                }
+                else
+                {
+                    Console.WriteLine("Not found");
+                }
+            }
+        }
+
+    }
+
     }
 
     //This person class is for the Day 3 Challenge of 30 Days of code.
@@ -145,4 +189,4 @@ namespace LeetCode_Challenges
         }
     }
 
-}
+
