@@ -33,8 +33,8 @@ namespace LeetCode_Challenges
             string strtest1 = "Rank";
 
 
-            HackerRnkClass.Day6(strtest);
-            HackerRnkClass.Day6(strtest1);
+            HackerRnkClass.Day6SepStrIndex(strtest);
+            HackerRnkClass.Day6SepStrIndex(strtest1);
 
             HackerRnkClass.ReverseArr(test);
 

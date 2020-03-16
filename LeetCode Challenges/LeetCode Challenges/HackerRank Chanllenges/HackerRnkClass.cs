@@ -31,7 +31,6 @@ namespace LeetCode_Challenges
         }
 
         //Reverse array
-
         public static int[] ReverseArr(int[] a)
         {
             List<int> output = new List<int> { };
@@ -48,8 +47,6 @@ namespace LeetCode_Challenges
             return output.ToArray();
 
         }
-
-
 
         //This method requests an integer input and iterates it through a for loop.
         public static void Day5forloop()
@@ -81,7 +78,8 @@ namespace LeetCode_Challenges
 
         }
 
-        public static void Day6(string str)
+        //Seperates the even indexes and odds in a string.
+        public static void Day6SepStrIndex(string str)
         {
             string odd = "";
             string even = "";
@@ -103,23 +101,30 @@ namespace LeetCode_Challenges
             //Reference: https://www.hackerrank.com/challenges/30-review-loop/problem
         }
 
+        //Creates a phonebook with user input.
         public static void Day8Dictionary()
         {
             Console.WriteLine("How many names do you want to add?");
+            //Input the amount of names to put into a dictionary.
             int n = Convert.ToInt32(Console.ReadLine());
+            //Create a dictionary name phoneBook.
             Dictionary<string, int> phoneBook = new Dictionary<string, int>(n);
             Console.WriteLine($"Enter Name and phone number {n} times.");
+            //For each desired entry input a name and valid number seperated by a space " ".
             for (int i = 0; i < n; i++)
             {
-                
+                //Initialize a array of strings and split the name and phone number entry.
                 string[] temp = Console.ReadLine().Split(' ');
                 if (temp[1].Length == 7)
                 {
+                    //Add the two strings in the array into the dictionary. 
                     phoneBook.Add(temp[0], Convert.ToInt32(temp[1]));
                 }
             }
+            //Initialize a string variable.
             string nameToSearch = "";
             Console.WriteLine("Search for a name in the phone book.");
+            //
             while ((nameToSearch = Console.ReadLine()) != null)
             {
                 int flagFound = 0;
@@ -132,12 +137,15 @@ namespace LeetCode_Challenges
                 }
                 if (flagFound == 1)
                 {
+                    // Output the key and the value of phone book if the name exists.  
                     Console.WriteLine(nameToSearch + "=" + phoneBook[nameToSearch]);
                 }
+                // If the user doesn't input anything then and hits enter exit the program. 
                 else if (nameToSearch == "")
                 {
                     break;
                 }
+                //If the user doesn't input the correct name then it displays a message.
                 else
                 {
                     Console.WriteLine("Not found");
