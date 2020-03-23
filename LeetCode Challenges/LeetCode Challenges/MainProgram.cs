@@ -10,35 +10,46 @@ namespace LeetCode_Challenges
         {
 
 
-            int[] test = { 2, 2, 4 };//Test array
-            int[] test1 = { 3,2,4 };//Test array
+            //int[] test = { 2, 2, 4 };//Test array
+            //int[] test1 = { 3,2,4 };//Test array
 
-            List<int> test2 = new List<int> () { 1, 2, 4, 4 };
-            List<int> test3 = new List<int>() { 2, 3, 3, 4 };
+            //List<int> test2 = new List<int> () { 1, 2, 4, 4 };
+            //List<int> test3 = new List<int>() { 2, 3, 3, 4 };
 
-            int test4 = 121;
+            //int test4 = 121;
 
-            Console.WriteLine(   TS.IsPalindrome(test4));
+            //Console.WriteLine(   TS.IsPalindrome(test4));
 
-            Day4Personclass tyler = new Day4Personclass(-1);
-            tyler.yearPasses();
-            tyler.yearPasses();
-            tyler.yearPasses();
-            Console.WriteLine(tyler.age);
-            tyler.amIOld();
+            //Day4Personclass tyler = new Day4Personclass(-1);
+            //tyler.yearPasses();
+            //tyler.yearPasses();
+            //tyler.yearPasses();
+            //Console.WriteLine(tyler.age);
+            //tyler.amIOld();
 
-            //HackerRnkClass.Day4forloop();
+            ////HackerRnkClass.Day4forloop();
 
-            string strtest = "Hacker";
-            string strtest1 = "Rank";
+            //string strtest = "Hacker";
+            //string strtest1 = "Rank";
 
 
-            HackerRnkClass.Day6SepStrIndex(strtest);
-            HackerRnkClass.Day6SepStrIndex(strtest1);
+            //HackerRnkClass.Day6SepStrIndex(strtest);
+            //HackerRnkClass.Day6SepStrIndex(strtest1);
 
-            HackerRnkClass.ReverseArr(test);
+            //HackerRnkClass.ReverseArr(test);
 
-            HackerRnkClass.Day8Dictionary();
+            //HackerRnkClass.Day8Dictionary();
+
+            int[] testing = new int[] { 0, 1, 2, 3, 4 };
+            int[] index = new int[] { 0, 1, 2, 2, 1 };
+
+            int[] tester = TS.CreateTargetArray(testing, index);
+
+            foreach (int testout in tester)
+            {
+
+                Console.WriteLine(testout);
+            }
 
             //Console.WriteLine(TS.Reverseint(test4));
 

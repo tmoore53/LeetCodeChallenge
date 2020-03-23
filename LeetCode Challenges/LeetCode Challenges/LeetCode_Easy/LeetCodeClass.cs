@@ -148,5 +148,34 @@ namespace LeetCode_Challenges
             return false;
             //Reference: https://leetcode.com/problems/palindrome-number/ 
         }
+
+
+        public static int[] CreateTargetArray(int[] nums, int[] index)
+        {
+            int[] targetArr = new int[nums.Length];
+
+            for (int i = 0; i < nums.Length; i++)
+            {
+                int number = nums[i];
+                int indexes = index[i];
+                if (index[i] == nums[i])
+                {
+                    targetArr[i] = nums[i];
+                }
+                else if (targetArr[index[i]] != nums[i])
+                {
+                    int temp = targetArr[index[i]];
+                    for (int j = targetArr.Length; j > index[i]; j--)
+                    {
+                        targetArr[j - 1] = targetArr[j - 2];
+                    }
+
+                    targetArr[index[i]] = nums[i];
+                }
+
+            }
+            //04132
+            return targetArr;
+        }
     }
 }
