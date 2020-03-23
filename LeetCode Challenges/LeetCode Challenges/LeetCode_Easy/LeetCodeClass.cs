@@ -150,31 +150,28 @@ namespace LeetCode_Challenges
         }
 
 
+        //This method returns a desired array when you enter an array of integer values, 
+        //and another array of indexes you want the first array values to be in. 
         public static int[] CreateTargetArray(int[] nums, int[] index)
         {
+            //New array to put values in the correct index
             int[] targetArr = new int[nums.Length];
-
+            //iterrate through the array parameters
             for (int i = 0; i < nums.Length; i++)
             {
-                int number = nums[i];
-                int indexes = index[i];
-                if (index[i] == nums[i])
-                {
-                    targetArr[i] = nums[i];
-                }
-                else if (targetArr[index[i]] != nums[i])
-                {
-                    int temp = targetArr[index[i]];
-                    for (int j = targetArr.Length; j > index[i]; j--)
+                //Move the index to the right
+                    for (int j = targetArr.Length; j - 1 > index[i]; j--)
                     {
                         targetArr[j - 1] = targetArr[j - 2];
                     }
-
-                    targetArr[index[i]] = nums[i];
-                }
-
+                //Set the desired index to the nums value.
+                targetArr[index[i]] = nums[i];
             }
-            //04132
+            //0,4,1,3,2
+            //
+            //0,1,2,3,4
+            //
+            //1,3,3
             return targetArr;
         }
     }
