@@ -130,6 +130,11 @@ namespace LeetCode_Challenges
                 x = x / 10;
 
             }
+            foreach (var item in temp)
+            {
+                Console.WriteLine(item);
+
+            }
             for (int i = 0, j = temp.Count -1; i < (temp.Count/2) -1; i++, j--)
             {
                 if (temp[i] == temp[j])
@@ -139,11 +144,7 @@ namespace LeetCode_Challenges
                 else
                     return false;
             }
-            foreach (var item in temp)
-            {
-                Console.WriteLine(item);
 
-            }
 
             return false;
             //Reference: https://leetcode.com/problems/palindrome-number/ 

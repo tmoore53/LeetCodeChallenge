@@ -9,6 +9,8 @@ namespace LeetCode_Challenges
         static void Main(string[] args)
         {
 
+            Console.WriteLine(HackerRnkClass.Day9MYRecursion(3));
+
 
             //int[] test = { 2, 2, 4 };//Test array
             //int[] test1 = { 3,2,4 };//Test array
@@ -16,9 +18,9 @@ namespace LeetCode_Challenges
             //List<int> test2 = new List<int> () { 1, 2, 4, 4 };
             //List<int> test3 = new List<int>() { 2, 3, 3, 4 };
 
-            //int test4 = 121;
+            int test4 = 121;
 
-            //Console.WriteLine(   TS.IsPalindrome(test4));
+            Console.WriteLine(TS.IsPalindrome(test4));
 
             //Day4Personclass tyler = new Day4Personclass(-1);
             //tyler.yearPasses();
@@ -40,34 +42,21 @@ namespace LeetCode_Challenges
 
             //HackerRnkClass.Day8Dictionary();
 
-            int[] testing = new int[] { 0, 1, 2, 3, 4 };
-            int[] index = new int[] { 0, 1, 2, 2, 1 };
-            
 
-            int[] test2 = new int[] { 1, 2, 3, 4, 0 };
-            int[] index2 = new int[] { 0, 1, 2, 3, 0 };
-
-            int[] test3 = new int[] { 3, 3, 1 };
-            int[] index3 = new int[] { 0, 0, 0 };
-
-            int[] tester = TS.CreateTargetArray(testing, index);
-            int[] tester2 = TS.CreateTargetArray(test2, index2);
-            int[] tester3 = TS.CreateTargetArray(test3, index3);
-
-            foreach (int testout in tester)
-            {
-                Console.Write(testout);
-            }
-            Console.WriteLine();
-            foreach (int testout in tester2)
-            {
-                Console.Write(testout);
-            }
-            Console.WriteLine();
-            foreach (int testout in tester3)
-            {
-                Console.Write(testout);
-            }
+            //foreach (int testout in tester)
+            //{
+            //    Console.Write(testout);
+            //}
+            //Console.WriteLine();
+            //foreach (int testout in tester2)
+            //{
+            //    Console.Write(testout);
+            //}
+            //Console.WriteLine();
+            //foreach (int testout in tester3)
+            //{
+            //    Console.Write(testout);
+            //}
 
             //Console.WriteLine(TS.Reverseint(test4));
 
