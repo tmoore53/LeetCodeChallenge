@@ -4,7 +4,7 @@ using System.Text;
 
 namespace LeetCode_Challenges
 {
-    class TS
+    class Leet
     {
         //To find the targeted value between the index values in an array.
         public static int[] TwoSum(int[] nums, int target)
@@ -121,32 +121,40 @@ namespace LeetCode_Challenges
             Console.WriteLine("The number that does not repeat in the array is {0}", res);
         }
 
+        //Identifies a integer if it is a Palindrome with a boolean value.
         public static bool IsPalindrome(int x)
         {
-            List<int> temp = new List<int> { };
-            while(x > 0 )
+            int[] arr = new int[x.ToString().Length];
+            int temp = 0;
+            if (x < 0)
             {
-                temp.Add(x % 10);
-                x = x / 10;
-
+                return false;
             }
-            foreach (var item in temp)
+            else if (x.ToString().Length == 1)
             {
-                Console.WriteLine(item);
-
+                return true;
             }
-            for (int i = 0, j = temp.Count -1; i < (temp.Count/2) -1; i++, j--)
+            else
             {
-                if (temp[i] == temp[j])
+                while (x > 0)
                 {
-                    return true;
+                    arr[temp] = (x % 10);
+                    x = x / 10;
+                    temp++;
                 }
-                else
+            }
+            for (int i = 0, j = arr.Length -1; i < (arr.Length/2); i++, j--)
+            {
+                    if (arr[i] == arr[j])
+                    {
+                        continue;
+                    }
+                    else 
                     return false;
             }
-
-
-            return false;
+            return true;
+            /* Runtime: 68 ms, faster than 54.01% of C# online submissions for Palindrome Number.
+            Memory Usage: 17.8 MB, less than 5.00% of C# online submissions for Palindrome Number.*/
             //Reference: https://leetcode.com/problems/palindrome-number/ 
         }
 
