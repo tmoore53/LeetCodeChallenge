@@ -6,6 +6,58 @@ namespace LeetCode_Challenges
 {
     class Leet
     {
+        // Roman numeral Convertion
+
+        public static int RomanToInt(string s)
+        {
+            /*Symbol       Value
+            I             1
+            V             5
+            X             10
+            L             50
+            C             100
+            D             500
+            M             1000*/
+            int output = 0;
+            int valueR = 0;
+            int temp = 0;
+            #region For Loop
+            for (int i = (s.Length - 1); i >= 0 ; i--)
+            {
+                #region Logic 2
+                if (s[i] == 'I')
+                    valueR = 1;
+                else if (s[i] == 'V')
+                    valueR = 5;
+                else if (s[i] == 'X')
+                    valueR = 10;
+                else if (s[i] == 'L')
+                    valueR = 50;
+                else if (s[i] == 'C')
+                    valueR = 100;
+                else if (s[i] == 'D')
+                    valueR = 500;
+                else if (s[i] == 'M')
+                    valueR = 1000;
+                #endregion
+                if (valueR < temp)
+                {
+                    output -= (valueR);
+                    temp = valueR;
+                }
+                else
+                {
+                    output += valueR;
+                    temp = valueR;
+                }
+            }
+            #endregion
+            return output;
+            /*Runtime: 96 ms, faster than 37.86% of C# online submissions for Roman to Integer.
+            Memory Usage: 25.6 MB, less than 8.70% of C# online submissions for Roman to Integer.*/
+
+            //https://leetcode.com/problems/roman-to-integer/submissions/
+        }
         //To find the targeted value between the index values in an array.
         public static int[] TwoSum(int[] nums, int target)
         {
@@ -157,7 +209,6 @@ namespace LeetCode_Challenges
             Memory Usage: 17.8 MB, less than 5.00% of C# online submissions for Palindrome Number.*/
             //Reference: https://leetcode.com/problems/palindrome-number/ 
         }
-
 
         //This method returns a desired array when you enter an array of integer values, 
         //and another array of indexes you want the first array values to be in. 

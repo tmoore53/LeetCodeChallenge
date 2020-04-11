@@ -8,11 +8,9 @@ namespace LeetCode_Challenges
     {
         static void Main(string[] args)
         {
-
-            Console.WriteLine(   Leet.IsPalindrome(1000021));
-
+           
         }
 
- 
+       
     }
 }
