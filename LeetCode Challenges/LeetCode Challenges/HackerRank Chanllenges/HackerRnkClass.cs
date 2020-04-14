@@ -161,6 +161,12 @@ namespace LeetCode_Challenges
                 return n * Day9MYRecursion(n - 1);
         }
 
+        public static int Day10Binary(int n)
+        {
+
+            return 0;
+        }
+
     }
 
     }
