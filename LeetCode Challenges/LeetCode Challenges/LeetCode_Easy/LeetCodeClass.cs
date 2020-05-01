@@ -172,7 +172,20 @@ namespace LeetCode_Challenges
             }
             Console.WriteLine("The number that does not repeat in the array is {0}", res);
         }
+        //Identifies if a string is a Palindrome with a boolean value.
+        static bool IsStringPalindrome(string word)
+        {
+            if (word.Length < 1)
+                return false;
+            for (int i = 0, j = word.Length - 1; i < word.Length / 2; i++, j--)
+            {
+                if (word[i] != word[j])
+                    return false;
 
+            }
+
+            return true;
+        }
         //Identifies a integer if it is a Palindrome with a boolean value.
         public static bool IsPalindrome(int x)
         {
